@@ -14,6 +14,6 @@ const map = new maplibregl.Map({
     // style: 'https://demotiles.maplibre.org/style.json', // style URL
     // style: 'https://tiles.openfreemap.org/styles/liberty',
     style: 'assets/style.json',
-    center: [5.66342, 51.97374], // starting position [lng, lat]
+    center: [51.97374, 5.66342], // starting position [lng, lat]
     zoom: 1 // starting zoom
 });
