@@ -17,7 +17,7 @@ const map = new maplibregl.Map({
     center: [5.66342, 51.97374], // starting position [lng, lat] 51.97838,5.64525
     zoom: 13 // starting zoom
 });
-map.addSource('some id', {
+map.addSource('wandeling', {
     type: 'geojson',
-    data: 'assets/wandeling.geojson'
+    data: 'https://github.com/siebrand-hhd/maplibre-workshop-foss4gnl-2025/blob/main/assets/wandeling.geojson'
 });
