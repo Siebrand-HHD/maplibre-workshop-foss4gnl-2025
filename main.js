@@ -27,7 +27,6 @@ const map = new maplibregl.Map({
 map.on('load', () => {
     map.addSource('wandeling', {
         type: 'geojson',
-        // data: 'https://github.com/siebrand-hhd/maplibre-workshop-foss4gnl-2025/blob/main/assets/wandeling.geojson',
         data: './assets/wandeling.geojson'
     });
 
