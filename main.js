@@ -22,3 +22,38 @@ map.addSource('wandeling', {
     // data: 'https://github.com/siebrand-hhd/maplibre-workshop-foss4gnl-2025/blob/main/assets/wandeling.geojson',
     data: './assets/wandeling.geojson'
 });
+
+    map.addLayer({
+        id: 'wandeling',
+        type: 'line',
+        source: 'wandeling',
+        paint: {
+            "line-color": [
+                "interpolate",
+                ["exponential", 2.5],
+                ["zoom"],
+                11,
+                "rgb(229, 53, 176)",
+                18,
+                "rgb(255, 197, 241)"
+            ],
+            "line-dasharray": [
+                "step",
+                ["zoom"],
+                ["literal", [3, 1]],
+                16,
+                ["literal", [2, 1]],
+                18,
+                ["literal", [2, 0]]
+            ],
+            "line-width": [
+                "interpolate",
+                ["exponential", 1.5],
+                ["zoom"],
+                11,
+                2.5,
+                20,
+                12
+            ]
+        },
+    });
