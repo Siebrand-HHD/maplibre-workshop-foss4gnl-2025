@@ -16,10 +16,10 @@
             }
         },
         {
-            id: 'wandeling',
-            type: 'line',
-            source: 'wandeling',
-            paint: {
+            "id": "wandeling",
+            "type": "line",
+            "source": "wandeling",
+            "paint": {
                 "line-color": [
                     "interpolate",
                     ["exponential", 2.5],
