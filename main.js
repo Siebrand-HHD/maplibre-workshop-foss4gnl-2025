@@ -15,13 +15,21 @@ const map = new maplibregl.Map({
     // style: 'https://tiles.openfreemap.org/styles/liberty',
     style: 'assets/style.json',
     center: [5.66342, 51.97374], // starting position [lng, lat] 51.97838,5.64525
-    zoom: 13 // starting zoom
+    zoom: 13, // starting zoom
+    maxBounds: [
+        [5.6058239, 51.9364055],
+        [5.7243627, 52.0007083]
+    ],
+    minZoom: 11,
+    maxZoom: 16,
 });
-map.addSource('wandeling', {
-    type: 'geojson',
-    // data: 'https://github.com/siebrand-hhd/maplibre-workshop-foss4gnl-2025/blob/main/assets/wandeling.geojson',
-    data: './assets/wandeling.geojson'
-});
+
+map.on('load', () => {
+    map.addSource('wandeling', {
+        type: 'geojson',
+        // data: 'https://github.com/siebrand-hhd/maplibre-workshop-foss4gnl-2025/blob/main/assets/wandeling.geojson',
+        data: './assets/wandeling.geojson'
+    });
 
     map.addLayer({
         id: 'wandeling',
@@ -57,3 +65,4 @@ map.addSource('wandeling', {
             ]
         },
     });
+});
